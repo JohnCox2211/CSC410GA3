@@ -42,19 +42,19 @@ public:
 
 	// NEW FUNCTIONS******************************************
 
-	void generatePopulation(int popSize, int nGenes);
-	void setTarget(Pixel* target, int imageSize);
-	void selectParents();
+	void generatePopulation(int popSize, int nGenes); // 
+	void setTarget(Pixel* target, int imageSize); //
+	void selectParents(); //
 
-	void setnCrossover(int nCrossover);
-	int getnCrossover();
+	void setnCrossover(int nCrossover); //
+	int getnCrossover(); //
 
-	void setMutation(double mRate);
+	void setMutation(double mRate); //
 
-	void generateNewPop(int useRoulette);
+	void generateNewPop(int useRoulette); //
 
-	void printParents();
-	void printPopulation();
+	void printParents(); //
+	void printPopulation(); //
 
 	// calcOverallFitness implemented in GA2
 

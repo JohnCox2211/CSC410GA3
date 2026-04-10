@@ -106,7 +106,7 @@ void genome::print() {
 }
 
 
-// NEW FUNCTIONS *****************
+// GA 2 FUNCTIONS ***************************
 
 // mutation rate setter & getter
 void genome::setmRate(double val){
@@ -209,4 +209,52 @@ Pixel genome::getPixel(int index){
 	}
 
 	return p;
+}
+
+
+// GA 3 FUNCTIONS (NEW) *****************************************
+
+//
+void genome::generatePopulation(int popSize, int nGenes){
+	return -1;
+}
+
+//
+void genome::setTarget(Pixel* target, int imageSize){
+		return -1;
+}
+
+//
+void genome::selectParents(){
+		return -1;
+}
+
+//
+void genome::setnCrossover(int nCrossover){
+		return -1;
+}
+
+// 
+int genome::getnCrossover();\{
+		return -1;
+}
+
+// 
+void genome::setMutation(double mRate){
+		return -1;
+}
+
+// 
+void genome::generateNewPop(int useRoulette){
+		return -1;
+}
+
+// 
+void genome::printParents(){
+		return -1;
+}
+
+//
+void genome::printPopulation(){
+		return -1;
 }
