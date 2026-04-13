@@ -40,29 +40,9 @@ public:
 	Pixel getPixel(int index); // returns pixel at given index or (0, 0, 0) if invalid index
 
 
-	// NEW FUNCTIONS******************************************
-
-	void generatePopulation(int popSize, int nGenes); // 
-	void setTarget(Pixel* target, int imageSize); //
-	void selectParents(); //
-
-	void setnCrossover(int nCrossover); //
-	int getnCrossover(); //
-
-	void setMutation(double mRate); //
-
-	void generateNewPop(int useRoulette); //
-
-	void printParents(); //
-	void printPopulation(); //
-
-	// calcOverallFitness implemented in GA2
-
 private:
 	Pixel* genes;
 	int nGenes;
 	double mRate; // mutation rate
-
-	//NEW VARIABLES ***********************
 };
 
