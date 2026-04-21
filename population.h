@@ -2,24 +2,24 @@
 
 class population{
 public:
-    population();
-    ~population();
+    population();  // class constructor (creates empty pop.)
+    ~population(); // class destructor (frees memory)
 
-    void generatePopulation(int popSize, int nGenes); // 
-	void setTarget(Pixel* target, int imageSize); //
-	void selectParents(); //
+    void generatePopulation(int popSize, int nGenes); // creates pop. of popSize, each genome has nGenes of genes
+	void setTarget(Pixel* target, int imageSize);     // sets the target genome (image) used for fitness eval.
+	void selectParents();                             // selects best 2 as parents based on fitness
 
-	void setnCrossover(int nCrossover); //
-	int getnCrossover(); //
+	void setnCrossover(int nCrossover);               // set num of crossover points for reproduction
+	int getnCrossover();                              // gets the num of crossover points
 
-	void setMutation(double mRate); //
+	void setMutation(double mRate);                   // set mutation rate for all genomes
 
-	void generateNewPop(int useRoulette); //
+	void generateNewPop();                            // generates new population using selected parents
 
-    double calcOverallFitness();
+    double calcOverallFitnessPop();                   // calc. avg. fitness of entire population
 
-	void printParents(); //
-	void printPopulation(); //
+	void printParents();                              // prints parents 
+	void printPopulation();                           // prints population
 
 
 private:
