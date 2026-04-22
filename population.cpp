@@ -66,13 +66,24 @@ void population::setTarget(Pixel* target, int imageSize){
 
 // // selects best 2 as parents based on fitness
 void population::selectParents(){
-	if(targetGenome == NULL || nIndividuals == 0) return;
+	if(targetGenome == NULL || nIndividuals < 2) return;
 
-    double best1;
-    double best2;
+    double best1 = individuals[0].calcOverallFitness(targetGenome, imageSize);
+    double best2 = individuals[1].calcOverallFitness(targetGenome, imageSize);
 
-    parentIndex1 = -1;
-    parentIndex2 = -1;
+    parentIndex1 = 0;
+    parentIndex2 = 1;
+
+    // ensures best1 is smaller
+    if(best2 < best1){
+        double tempFit = best1;
+        best1 = best2;
+        best2 = tempFit;
+
+        int tempIndex = parentIndex1;
+        parentIndex1 = parentIndex2;
+        parentIndex2 = tempIndex;
+    }
 
     for(int i = 0; i < nIndividuals; i++){
         double fit = individuals[i].calcOverallFitness(targetGenome, imageSize);

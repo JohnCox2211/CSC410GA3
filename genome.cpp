@@ -180,7 +180,7 @@ double genome::calcOverallFitness(Pixel* target, int nPixels){
 		totalDiff += abs(genes[i].blue - target[i].blue);
 	}
 	// avg diff across all pixels/RGB
-	double avgDiff = totalDiff / 3.0;
+	double avgDiff = totalDiff / (3.0 * nGenes);
 
 	// return normalized difference as percentage
 	return avgDiff / 256;
