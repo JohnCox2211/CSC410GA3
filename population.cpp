@@ -64,7 +64,7 @@ void population::setTarget(Pixel* target, int imageSize){
     }
 }
 
-// // selects best 2 as parents based on fitness
+// selects best 2 as parents based on fitness
 void population::selectParents(){
 	if(targetGenome == NULL || nIndividuals < 2) return;
 
